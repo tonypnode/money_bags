@@ -1,0 +1,16 @@
+{%  include 'base_html.j2' %}
+<body>
+    <h1>Money Bags Home Page</h1>
+
+    <h1>Add Bill</h1>
+    <form name="new_bill" action="{% url "index" %}" method="POST">{% csrf_token %}
+    {{  new_bill_form }}
+    <button type="submit" value="Add"></button>
+    </form>
+    <br/>
+    <h2>Bills</h2>
+    {% for bill in bills %}
+        {{ bill.name }} - {{ bill.zero_interest_date }} - ${{ bill.start_amount }}<br/>
+    {% endfor %}
+</body>
+</html>
