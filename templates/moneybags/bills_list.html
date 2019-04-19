@@ -1,0 +1,14 @@
+<h2>Bills</h2>
+    <table>
+        <th align="center" width="170">Bill Name</th>
+        <th align="center" width="170">Zero Interest Date</th>
+        <th align="center" width="170">Start Amount</th>
+
+    {% for bill in bills %}
+        <tr align="left">
+            <td>{{ bill.name }}</td>
+            <td>{{ bill.zero_interest_date }}</td>
+            <td>${{ bill.start_amount }}</td>
+        </tr>
+    {% endfor %}
+    </table>

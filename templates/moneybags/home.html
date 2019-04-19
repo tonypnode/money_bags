@@ -8,9 +8,7 @@
     <button type="submit" value="Add"></button>
     </form>
     <br/>
-    <h2>Bills</h2>
-    {% for bill in bills %}
-        {{ bill.name }} - {{ bill.zero_interest_date }} - ${{ bill.start_amount }}<br/>
-    {% endfor %}
+    {% include 'bills_list.html' %}
 </body>
 </html>
+
